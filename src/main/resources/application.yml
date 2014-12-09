@@ -4,35 +4,45 @@ server:
 management:
   context-path: /admin
   
+#logging:
+#  level:
+##    com.netflix.discovery: 'OFF'
+#    org.springframework.cloud: 'DEBUG'
+info:
+  component: Config Server Demo
+endpoints:
+  restart:
+    enabled: true
 logging:
-  level:
-    com.netflix.discovery: 'OFF'
-    org.springframework.cloud: 'DEBUG'
-    
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 10
-    statusPageUrlPath: /admin/info
-    healthCheckUrlPath: /admin/health
-    metadataMap:
-      password: ${security.user.password}
-  client:
-    serviceUrl:
-      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:password@localhost:8761}/eureka/
-
+  levels:
+    org.springframework.boot.env.PropertySourcesLoader: TRACE
+    org.springframework.web: DEBUG
+    org.springframework.cloud: DEBUG
+#
+#eureka:
+#  instance:
+#    leaseRenewalIntervalInSeconds: 10
+#    statusPageUrlPath: /admin/info
+#    healthCheckUrlPath: /admin/health
+#    metadataMap:
+##      password: ${security.user.password}
+#      password:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:http://user:password@localhost:8761}/eureka/
+#
 spring:
   cloud:
     config:
       server:
         git:
-          #uri: https://github.com/spring-cloud-samples/config-repo
-          #TODO TS change to github
-          file: ~/git-files/spring-cloud-demo/SC_config_files
-          basedir: target/config
+          uri: https://github.com/toschneck/SC_shared_config
+#          basedir: target/config
 
-security:
-  user:
-    password: '{cipher}AQALPcZfz4hIPuEJSl4eGkV46OSrg4eN1Z+GKjY6zTAdMNweiMpJvsAB0xSyEvvKe4Da3U56YBrDOmQ3LrEF98ojtRrwI/ZHyDpF8cmVTlk8KlutFAWs/nts/xFZgwamaw/pyKzAceyW3MHVUrDQhKE6IMw8ly+XpA0Dr8IkR2M1UWKPNFK97n5hk8yGyYuJ5bCRtlv1WllMMnORS9+yvuswO+Van/bjSCh+6i8fPy/F/eKZUu8m0Mw6nm1f/VrrrMsDQ9YebgAYrn99OKRA0WPoZm6SUXwU2icAC2uAppfCqSG3gWVT91FEa7qkSM60lRdMbXZDUZhk9DKkwyatvFJjk/GRN37gzqoABkmj2MDoZG59Yz9n/gu1nkKYlw+u03k='
+#security:
+#  user:
+#    password: '{cipher}AQALPcZfz4hIPuEJSl4eGkV46OSrg4eN1Z+GKjY6zTAdMNweiMpJvsAB0xSyEvvKe4Da3U56YBrDOmQ3LrEF98ojtRrwI/ZHyDpF8cmVTlk8KlutFAWs/nts/xFZgwamaw/pyKzAceyW3MHVUrDQhKE6IMw8ly+XpA0Dr8IkR2M1UWKPNFK97n5hk8yGyYuJ5bCRtlv1WllMMnORS9+yvuswO+Van/bjSCh+6i8fPy/F/eKZUu8m0Mw6nm1f/VrrrMsDQ9YebgAYrn99OKRA0WPoZm6SUXwU2icAC2uAppfCqSG3gWVT91FEa7qkSM60lRdMbXZDUZhk9DKkwyatvFJjk/GRN37gzqoABkmj2MDoZG59Yz9n/gu1nkKYlw+u03k='
+#    password:
 #
 ## TODO: move these profiles to the remote repo
 #
