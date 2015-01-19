@@ -9,11 +9,13 @@ spring:
 #    client:
 #      serviceUrl:
 #        defaultZone: http://localhost:8761/eureka/
-#encrypt:
-#  failOnError: false
-#  keyStore:
-#    location: classpath:sc-keystore.jks
-#    # don't use a default in production
-#    password: consol
-#    alias: demokeystore
+
+
+encrypt:
+  failOnError: false
+  keyStore:
+    location: classpath:sc-keystore.jks
+    # don't use a default in production
+    password: consol
+    alias: demokeystore
     
