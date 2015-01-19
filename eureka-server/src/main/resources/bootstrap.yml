@@ -1,0 +1,13 @@
+spring:
+#  profiles:
+#    active: native
+  application:
+    name: eureka-server
+#encrypt:
+#  failOnError: false
+#  keyStore:
+#    location: classpath:sc-keystore.jks
+#    # don't use a default in production
+#    password: consol
+#    alias: demokeystore
+    

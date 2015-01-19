@@ -18,6 +18,13 @@ logging:
     org.springframework.boot.env.PropertySourcesLoader: TRACE
     org.springframework.web: DEBUG
     org.springframework.cloud: DEBUG
+
+#eureka:
+#  instance:
+#    metadataMap:
+#      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+#
+
 #
 #eureka:
 #  instance:
