@@ -46,21 +46,10 @@ spring:
           uri: https://github.com/toschneck/SC_shared_config
 #          basedir: target/config
 
-#security:
-#  user:
+security:
+  user:
+     name: demo
+#     password: test
+     password: '{cipher}AQBVAofxULZsKAsR6y9RcziW2OucFSspTT367J7drlNQdzQ7xlV/6KsMOIHaOEQp7KqRrBsWoWJhk3l5LlZkffmMWKrZDEn/twMN+odHSfFq5xK0ZxzEWoyDaz5vgeLcSJjQVggele4K0j/hQLTHppQjdKbpVzZWKwmnIxnw8zj8TOQvAueHbjJcJ1v3+vwsKalW7REllxlfZH+EabBpYib+BBLhAFLE5QyJK1XMh4NPyaFQvOCG/8kQR90zdR2F4n9ICcP+15S2PwC6DgV8JkRfzctSf2DPBfRHY9Pt35uwwut/I61QZ/ROiY6uKo5sC63GCTX4DSHMCaM0kQZzCH/hnk6bOe0P2IGQ+2BoJ3NUisVd7yVkz6js1uSzpp3omwQ='
 #    password: '{cipher}AQALPcZfz4hIPuEJSl4eGkV46OSrg4eN1Z+GKjY6zTAdMNweiMpJvsAB0xSyEvvKe4Da3U56YBrDOmQ3LrEF98ojtRrwI/ZHyDpF8cmVTlk8KlutFAWs/nts/xFZgwamaw/pyKzAceyW3MHVUrDQhKE6IMw8ly+XpA0Dr8IkR2M1UWKPNFK97n5hk8yGyYuJ5bCRtlv1WllMMnORS9+yvuswO+Van/bjSCh+6i8fPy/F/eKZUu8m0Mw6nm1f/VrrrMsDQ9YebgAYrn99OKRA0WPoZm6SUXwU2icAC2uAppfCqSG3gWVT91FEa7qkSM60lRdMbXZDUZhk9DKkwyatvFJjk/GRN37gzqoABkmj2MDoZG59Yz9n/gu1nkKYlw+u03k='
-#    password:
-#
-## TODO: move these profiles to the remote repo
-#
-#---
-#spring:
-#  profiles: cloud
-#eureka:
-#  instance:
-#    hostname: ${PREFIX:}${spring.application.name}.${application.domain:cfapps.io}
-#    nonSecurePort: 80
-## no JCE in PWS
-#security:
-#  user:
-#    password: password
+#            test
